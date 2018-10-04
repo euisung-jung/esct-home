@@ -1,28 +1,71 @@
-<h1>분양 등록</h1>
-<h2><form action="/action_page.php">
-  제    목: <input type="text" name="column1" value=""><br>
-  현 장 명: <input type="text" name="column2" value=""><br>
-  분양세대: <input type="text" name="column3" value=""><br>
-  최소면적: <input type="text" name="column4" value=""><br>
-  최대면적: <input type="text" name="column5" value=""><br>
-  분양형태: <select name="ansd">
-           <option value="volvo">민간분양</option>
-           <option value="saab">청약</option>
-           <option value="fiat">상시문양</option>
-           </select><br>
-  분 양 물: <select name="ansd">
-           <option value="volvo">아파트</option>
-           <option value="saab">오피스텔</option>
-           <option value="fiat">상가</option>
-           </select><br>
-  오픈일자: <input type = "date"><br>
-  청약일정: <input type = "date"> ~
-           <input type = "date"><br>
-  분양문의 : <input type="text" name="column9" value=""><br>
-  견분주택 : <input type="text" name="column0" value=""><br>
+<meta charset="utf-8" name="viewport" content="width=device-width,
+          initial-scale=1.0, minimum-scale=1.0,user-scalable=no" />
 
+<title> 돈이되는 분양정보 </title>
+<style>
+  * { margin:0; padding:0; }
+  body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  li { list-style:none }
+  a { text-decoration:none; }
+  #top {
+           height: 45px;
+           background:url('imgso/bg_header.png');
+           position:relative;
+           text-align:center;
+           line-height:45px;
+       }
+  #top > a, #top label {
+    display:block;
+    height:32px;
+    position:absolute;
+    }
+  #top > a.left {
+    width:80px;
+    left:10px; top:7px;
+    }
+  #top > label.right {
+    width:64px;
+    right:10px; top:7px;
+    }
+  #munetoggle {display:none; }
 
-  <br>
-  <input type="submit" value="Submit">    <input type="reset">
-</h2>
-</form>
+  #navwrap { height:60px; background-color:#4bcdba; }
+  #navwrap #nav {overflow:hidden;}
+  #navwrap #nav li {float:left;
+            width:20%;
+            height:60px;
+            line-height:60px;
+            color:#db2222;
+            font-weight:bold;
+            font-size:1.2em;
+            text-align:center;
+            border:1px solid #dd25ed;
+            box-sizing:border-box;
+}
+</style>
+<input id="munetoggle" type="checkbox"/>
+<div id="topwrap">
+<header id="top">
+  <a class="left" href=""><img src="imgso/category.png" alt="메뉴"/></a>
+  <h1>돈이되는 분양정보</h1>
+  <label class="right" for="munetoggle" onclick=""><img src="imgso/menu.png" alt="설정"/>
+</header>
+<nav id="navwrap">
+  <div id="nav">
+  <ul id="navlist">
+      <li><a href="#none">오늘의 청약</a></li>
+      <li><a href="#none">오늘의 오픈</a></li>
+      <li><a href="#none">선착순 모집</a></li>
+      <li><a href="#none">오늘의 청약</a></li>
+      <li><a href="#none">검색</a></li>
+    </ul>
+      </div>
+</nav>
+<section id="cntwrap">
+  컨텐츠 구역
+</section>
+<footer>
+  <div class="logo"><img src="none" alt="이미지어디갔니?"></div>
+  <div class="info"> 분양정보사이트</div>
+  <div class="addr">123-456 서울 강동구 상일동</div>
+</footer>
